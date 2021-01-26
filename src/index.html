@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="style.scss">
+
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="stylesheet" href="reset-css.scss">
+    <link rel="stylesheet" href="style.scss">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <label class="calc--header">Consumption for</label>
+        <nav>
+            <div class="calc--month">
+                <div id="month">Month</div>
+                <div class="calc--month__hidden">
+                    <div class="calc--month__hidden--active__chill">January</div>
+                    <div class="calc--month__hidden--active__chill">February</div>
+                    <div class="calc--month__hidden--active__chill">March</div>
+                    <div class="calc--month__hidden--active__chill">April</div>
+                    <div class="calc--month__hidden--active__chill">May</div>
+                    <div class="calc--month__hidden--active__chill">June</div>
+                    <div class="calc--month__hidden--active__chill">July</div>
+                    <div class="calc--month__hidden--active__chill">August</div>
+                    <div class="calc--month__hidden--active__chill">September</div>
+                    <div class="calc--month__hidden--active__chill">October</div>
+                    <div class="calc--month__hidden--active__chill">November</div>
+                    <div class="calc--month__hidden--active__chill">December</div>
+                </div>
+            </div>
+        </nav>
+        <nav>
+            <div class="calc--year">
+                <div id="year"> Year</div>
+                <div class="calc--year__hidden">
+                    <div class="calc--year__hidden--active__chill">2021</div>
+                    <div class="calc--year__hidden--active__chill">2022</div>
+                    <div class="calc--year__hidden--active__chill">2023</div>
+                    <div class="calc--year__hidden--active__chill">2024</div>
+                    <div class="calc--year__hidden--active__chill">2025</div>
+                    <div class="calc--year__hidden--active__chill">2026</div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="calc">
+        <div class="calc--expenses">
+            <div class="calc--expenses__stack">
+                <div class="calc--expenses__stack--chill">
+                    <form class="chill--elem">
+                        <input class="chill--elem__btn--delete" type="button" value="x">
+                        <input class="chill--elem__name" type="text" placeholder="Enter name">
+                        <div class="chill--elem__sum--value"></div>
+                        <div class="chill--elem__circle">
+                            <div class="chill--elem__circle--value"></div>
+                        </div>
+                        <input class="chill--elem__push--sum" type="number" name="leveld" min="0" placeholder="Enter the amount" max="5000000">
+                        <input class="chill--elem__btn--push" type="button" value="push">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="calc--expenses__add">
+            <label for="">+</label>
+        </div>
+        <div class="calc--expenses__save">save</div>
+        <div class="calc--expenses__total"> Total expenses</div>
+        <div class="calc--expenses__old"></div>
+</body>
+
+</html>
+
+<script src="script.js"></script>

@@ -1,0 +1,18 @@
+{
+    "name": "app-node",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "api": "node server",
+        "site": "node site-server"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "reset-css": "^5.0.1",
+        "scss": "^0.2.4",
+        "static-server": "^2.2.1"
+    }
+}
