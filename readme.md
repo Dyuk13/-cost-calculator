@@ -1,4 +1,4 @@
-#### example rest client plain Js
+hey
 
 - npm i
 - npm run api
