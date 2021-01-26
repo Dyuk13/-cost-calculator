@@ -13,6 +13,7 @@
         "express": "^4.17.1",
         "reset-css": "^5.0.1",
         "scss": "^0.2.4",
-        "static-server": "^2.2.1"
+        "node-sass": "^4.12",
+        "node-sass-middleware": "0.11"
     }
 }

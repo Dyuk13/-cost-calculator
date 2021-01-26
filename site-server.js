@@ -1,23 +1,25 @@
-var StaticServer = require('static-server');
+var express = require('express');
+var sassMiddleware = require('node-sass-middleware')
 
-var server = new StaticServer({
-    rootPath: '.', // required, the root of the server file tree
-    port: 3001, // required, the port to listen
-    name: 'my-site', // optional, will set "X-Powered-by" HTTP header
-    host: '127.0.0.1', // optional, defaults to any interface
-    cors: '*', // optional, defaults to undefined
-    followSymlink: true, // optional, defaults to a 404 error
-    templates: {
-        index: './src/index.html', // optional, defaults to 'index.html'
-        notFound: '404.html' // optional, defaults to undefined
-    }
+// создаём Express-приложение
+var app = express();
+
+app.set('port', process.env.PORT || 3001);
+
+app.use(sassMiddleware({
+  /* Options */
+  src: __dirname + '/src/styles', //where the sass files are
+  dest: __dirname + '/public', //where css should go
+  debug: true,
+}));
+
+app.use('/script.js', express.static('./src/script.js'));
+app.use(express.static('public'));
+
+app.get('/', function(req, res) {
+  res.sendfile('./src/index.html');
 });
 
-server.start(function() {
-    console.log('Server listening to', server.port);
-});
+app.listen(3001);
 
-
-server.on('request', function(req, res) {
-    console.log('req.path', req.path);
-});
+console.log('Server started');
